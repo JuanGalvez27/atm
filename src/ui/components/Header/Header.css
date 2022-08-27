@@ -1,0 +1,38 @@
+.header {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  background-color: darkcyan;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  font-family: sans-serif;
+}
+.bank-name {
+  margin-left: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: beige;
+  border: 1px solid gold;
+  height: 40px;
+  justify-content: space-between;
+
+}
+
+.bank-logo img {
+  height: 50px;
+  margin-right: 20px;
+}
+
+.info {
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 1rem;
+  gap: 10px;
+  margin-right: 20px;
+}
+.info div:hover {
+  color: darkgray;
+  cursor: pointer;
+}

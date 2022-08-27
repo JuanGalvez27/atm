@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  background-color: darkcyan;
+  height: 30px;
+  font-family: sans-serif;
+}
+
+.footer:hover {
+  color: darkgray;
+  cursor: pointer;
+}
