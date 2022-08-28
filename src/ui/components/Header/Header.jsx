@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className='header'>
       <div className='bank-name'>
-        Bancagado
+        Banco Bárbaros
         <div className='bank-logo'>
           <img src={logo} alt='logo' />
         </div>
