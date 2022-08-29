@@ -1,23 +1,37 @@
 import React from 'react'
+import { useState } from 'react';
 
-const Retiro = () => {
-  
+// eslint-disable-next-line
+const Retiro = ({ cajero, setMostrarRetiro, setResponse }) => {
+  const[valorRetiro, setValorRetiro] = useState(0);
+  // eslint-disable-next-line
+  console.log(cajero.saldo)
+
+  const handleValorRetiro = (e) => {
+    e.preventDefault()
+    setValorRetiro(e.target.value)
+  }
+
+  const handleRetiro = (e) => {
+    e.preventDefault();
+    // eslint-disable-next-line
+    if(valorRetiro > cajero.saldo){
+      
+    }
+    
+    // eslint-disable-next-line
+    cajero.retiro(parseInt(valorRetiro));
+    setResponse('Bienvenido a Banco Bárbaros, ¿qué desea hacer, su majestad?')
+    setMostrarRetiro(false)
+  }
+
   return (
-    <div>
-        {/* <form onSubmit={handleRetiro}>
-          <input type='number' ></input>
-        </form> */}
-    </div>
+    <form onSubmit={handleRetiro}>
+      <label>¿Cuánto desea retirar?</label>
+      <input type='number' onChange={handleValorRetiro}></input>
+    </form>
   )
 }
 
-// () => {
-//   <form onSubmit={handleRetiro}>
-//     <input type='number' ></input>
-//   </form>
-//   cajero.retirarDinero(retiro);
-//   setResponse(`hay ${cajero.saldo}`)
-
-// }
 
 export default Retiro

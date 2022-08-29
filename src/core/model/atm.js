@@ -6,7 +6,7 @@ export class ATM {
 
   //metodos
 
-  retirarDinero (retiro){ 
+  retiro (retiro){ 
     return this._saldo = this._saldo - retiro;
   }
 
