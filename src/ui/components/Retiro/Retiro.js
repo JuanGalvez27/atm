@@ -16,13 +16,15 @@ const Retiro = ({ cajero, setMostrarRetiro, setResponse }) => {
     e.preventDefault();
     // eslint-disable-next-line
     if(valorRetiro > cajero.saldo){
-      
+      setResponse('Saldo insuficiente')
+    } else {
+      // eslint-disable-next-line
+      cajero.retiro(parseInt(valorRetiro));
+      setResponse('Bienvenido a Banco Bárbaros, ¿qué desea hacer, su majestad?')
+      setMostrarRetiro(false)
     }
     
-    // eslint-disable-next-line
-    cajero.retiro(parseInt(valorRetiro));
-    setResponse('Bienvenido a Banco Bárbaros, ¿qué desea hacer, su majestad?')
-    setMostrarRetiro(false)
+
   }
 
   return (
